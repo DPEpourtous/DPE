@@ -8,7 +8,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        /* Tous les styles CSS précédents */
         :root {
             --primary-color: #2E7D32;
             --secondary-color: #4CAF50;
@@ -16,50 +15,165 @@
             --text-color: #333;
             --light-gray: #f5f5f5;
             --border-radius: 8px;
-            --transition: all 0.3s ease;
         }
 
-        /* Ajout des nouveaux styles pour les liens email */
-        .contact-details a[href^="mailto:"],
-        .footer-section a[href^="mailto:"] {
-            color: var(--primary-color);
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+        }
+
+        /* Header Styles */
+        .header {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo h1 {
+            font-size: 1.8rem;
+            font-weight: 700;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: white;
             text-decoration: none;
-            transition: var(--transition);
+            font-weight: 500;
+            transition: color 0.3s;
         }
 
-        .contact-details a[href^="mailto:"]:hover,
-        .footer-section a[href^="mailto:"]:hover {
-            text-decoration: underline;
-            color: var(--secondary-color);
+        .nav-links a:hover {
+            color: var(--accent-color);
         }
 
-        /* Style pour le message de confirmation du formulaire */
-        .form-message {
-            padding: 1rem;
-            margin: 1rem 0;
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 100px 20px;
+            text-align: center;
+        }
+
+        .hero h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto 2rem;
+        }
+
+        /* Actualités Section */
+        .actualites-section {
+            background: var(--light-gray);
+            padding: 4rem 0;
+            text-align: center;
+        }
+
+        .actualites-section h2 {
+            color: var(--primary-color);
+        }
+
+        .actualite-item {
+            max-width: 800px;
+            margin: 1.5rem auto;
+            padding: 1.5rem;
+            background: white;
             border-radius: var(--border-radius);
-            display: none;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            text-align: left;
         }
 
-        .form-message.success {
-            background-color: #DFF0D8;
-            color: #3C763D;
-            border: 1px solid #D6E9C6;
-            display: block;
+        .actualite-item h3 {
+            color: var(--secondary-color);
+            margin-bottom: 1rem;
         }
 
-        .form-message.error {
-            background-color: #F2DEDE;
-            color: #A94442;
-            border: 1px solid #EBCCD1;
-            display: block;
+        .actualite-item p {
+            margin-bottom: 1rem;
         }
 
-        /* Ajoutez ici tous les autres styles CSS précédents */
+        /* Footer */
+        footer {
+            background: var(--primary-color);
+            color: white;
+            padding: 4rem 0 2rem;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .footer-section h3 {
+            margin-bottom: 1rem;
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section ul li {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-section i {
+            width: 20px;
+            margin-right: 10px;
+            color: var(--accent-color);
+        }
+
+        .copyright {
+            text-align: center;
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .hero h2 {
+                font-size: 2rem;
+            }
+        }
     </style>
 </head>
+
 <body>
-    <!-- Header et Navigation -->
     <header class="header">
         <div class="header-content">
             <div class="logo">
@@ -69,80 +183,33 @@
                 <a href="#services">Services</a>
                 <a href="#actualites">Actualités</a>
                 <a href="#contact">Contact</a>
-                <a href="#tarifs">Tarifs</a>
             </nav>
         </div>
     </header>
 
-    <!-- Section Hero -->
     <section class="hero">
         <h2>J&J DIAG - Expert en Diagnostic de Performance Énergétique</h2>
         <p>Votre expert DPE de confiance à Jouy-le-Moutier et en Île-de-France</p>
         <a href="#contact" class="btn">Demander un devis gratuit</a>
     </section>
 
-    <!-- Badges de confiance -->
-    <!-- Insérez ici la section trust-badges précédente -->
-
-    <!-- Services -->
-    <!-- Insérez ici la section services précédente -->
-
-    <!-- Actualités -->
-    <!-- Insérez ici la section actualités précédente -->
-
-    <!-- Section Contact avec le nouveau formulaire -->
-    <section id="contact" class="contact">
-        <h2>Demande de Devis Gratuit</h2>
-        <div class="contact-info">
-            <div class="contact-details">
-                <h3>Nos Coordonnées</h3>
-                <p><i class="fas fa-map-marker-alt"></i> 8 rue Maurice Ravel, 95280 Jouy-le-Moutier</p>
-                <p><i class="fas fa-phone"></i> <a href="tel:0763660409">07 63 66 04 09</a></p>
-                <p><i class="fas fa-envelope"></i> <a href="mailto:jawad.padid@hotmail.fr">jawad.padid@hotmail.fr</a></p>
-                <p><i class="fas fa-clock"></i> Du lundi au samedi, de 8h à 19h</p>
-            </div>
+    <section id="actualites" class="actualites-section">
+        <h2>Dernières Actualités sur les Obligations DPE</h2>
+        <div class="actualite-item">
+            <h3>Nouvelle Réglementation pour les Bâtiments Collectifs (2024)</h3>
+            <p>Depuis le 1er janvier 2024, les copropriétés doivent réaliser un DPE collectif. Cette mesure s’applique aux immeubles d’habitation collectifs construits avant 2013.</p>
         </div>
-        <div id="form-message" class="form-message"></div>
-        <form id="contact-form" action="https://formspree.io/f/votre_id_formspree" method="POST">
-            <input type="hidden" name="_subject" value="Nouvelle demande de contact J&J DIAG">
-            <input type="hidden" name="_replyto" value="jawad.padid@hotmail.fr">
-            
-            <div class="form-group">
-                <label for="name">Nom complet</label>
-                <input type="text" id="name" name="name" required>
-            </div>
-            <div class="form-group">
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email" required>
-            </div>
-            <div class="form-group">
-                <label for="phone">Téléphone</label>
-                <input type="tel" id="phone" name="phone" required>
-            </div>
-            <div class="form-group">
-                <label for="service">Type de service</label>
-                <select id="service" name="service" required>
-                    <option value="">Choisissez un service</option>
-                    <option value="dpe-vente">DPE Vente</option>
-                    <option value="dpe-location">DPE Location</option>
-                    <option value="dpe-copropriete">DPE Copropriété</option>
-                </select>
-            </div>
-            <div class="form-group">
-                <label for="message">Message</label>
-                <textarea id="message" name="message" rows="4"></textarea>
-            </div>
-            <button type="submit" class="btn">Envoyer la demande</button>
-        </form>
+        <div class="actualite-item">
+            <h3>Interdiction de Location des Logements F</h3>
+            <p>À partir de 2025, les logements classés F au DPE seront interdits à la location. Préparez-vous dès maintenant pour rester conforme.</p>
+        </div>
     </section>
 
-    <!-- Footer avec les coordonnées mises à jour -->
     <footer>
         <div class="footer-content">
             <div class="footer-section">
                 <h3>Contact</h3>
-                <p><i class="fas fa-map-marker-alt"></i> 8 rue Maurice Ravel</p>
-                <p>95280 Jouy-le-Moutier</p>
+                <p><i class="fas fa-map-marker-alt"></i> 8 rue Maurice Ravel, 95280 Jouy-le-Moutier</p>
                 <p><i class="fas fa-phone"></i> <a href="tel:0763660409">07 63 66 04 09</a></p>
                 <p><i class="fas fa-envelope"></i> <a href="mailto:jawad.padid@hotmail.fr">jawad.padid@hotmail.fr</a></p>
             </div>
@@ -153,53 +220,12 @@
             </div>
             <div class="footer-section">
                 <h3>Zone d'intervention</h3>
-                <p>Jouy-le-Moutier</p>
-                <p>Val d'Oise (95)</p>
-                <p>Île-de-France</p>
-            </div>
-            <div class="footer-section">
-                <h3>Informations</h3>
-                <ul>
-                    <li><a href="#mentions-legales">Mentions légales</a></li>
-                    <li><a href="#cgv">CGV</a></li>
-                    <li><a href="#politique-confidentialite">Politique de confidentialité</a></li>
-                </ul>
+                <p>Jouy-le-Moutier, Val d'Oise (95), Île-de-France</p>
             </div>
         </div>
         <div class="copyright">
             <p>&copy; 2024 J&J DIAG - Tous droits réservés</p>
         </div>
     </footer>
-
-    <script>
-        // Gestion du formulaire de contact
-        document.getElementById('contact-form').addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            const formMessage = document.getElementById('form-message');
-            
-            // Simulation d'envoi (à remplacer par votre logique d'envoi réelle)
-            setTimeout(() => {
-                formMessage.className = 'form-message success';
-                formMessage.textContent = 'Merci pour votre message. Nous vous contacterons dans les plus brefs délais.';
-                this.reset();
-
-                // Cache le message après 5 secondes
-                setTimeout(() => {
-                    formMessage.style.display = 'none';
-                }, 5000);
-            }, 1000);
-        });
-
-        // Animation smooth scroll
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
-    </script>
 </body>
 </html>
