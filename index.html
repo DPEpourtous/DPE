@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expert en Diagnostic de Performance Énergétique (DPE)</title>
+    <style>
+        /* Styles existants... */
+        .service-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        .service-item {
+            flex-basis: calc(50% - 20px);
+            margin-bottom: 20px;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .cta-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Expert en Diagnostic de Performance Énergétique (DPE)</h1>
+        <nav>
+            <ul>
+                <li><a href="#services">Nos Services</a></li>
+                <li><a href="#about">À Propos</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="services">
+            <h2>Nos Services de Diagnostic DPE</h2>
+            <div class="service-list">
+                <div class="service-item">
+                    <h3>DPE Résidentiel</h3>
+                    <p>Évaluation précise de la performance énergétique de votre logement, conformément à la réglementation en vigueur. Obtenez votre étiquette énergétique de A à G.</p>
+                    <a href="#contact" class="cta-button">Demander un devis</a>
+                </div>
+                <div class="service-item">
+                    <h3>DPE Tertiaire</h3>
+                    <p>Diagnostic adapté aux bâtiments professionnels et commerciaux. Optimisez votre consommation énergétique et réduisez vos coûts.</p>
+                    <a href="#contact" class="cta-button">Demander un devis</a>
+                </div>
+                <div class="service-item">
+                    <h3>Conseil en Rénovation Énergétique</h3>
+                    <p>Suite à votre DPE, bénéficiez de recommandations personnalisées pour améliorer l'efficacité énergétique de votre bien.</p>
+                    <a href="#contact" class="cta-button">En savoir plus</a>
+                </div>
+                <div class="service-item">
+                    <h3>DPE Location</h3>
+                    <p>Diagnostic obligatoire pour la mise en location de votre bien. Respectez la loi et informez vos locataires.</p>
+                    <a href="#contact" class="cta-button">Réserver maintenant</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="about">
+            <h2>Pourquoi Nous Choisir ?</h2>
+            <ul>
+                <li>Experts certifiés et formés aux dernières réglementations :cite[ko]</li>
+                <li>Utilisation d'outils de pointe pour des diagnostics précis :cite[1f]</li>
+                <li>Rapports détaillés et compréhensibles</li>
+                <li>Conseils personnalisés pour l'amélioration énergétique</li>
+                <li>Tarifs compétitifs à partir de 120€ pour un DPE :cite[bx]</li>
+            </ul>
+        </section>
+
+        <section id="contact">
+            <h2>Contactez-nous</h2>
+            <form id="contact-form" class="contact-form">
+                <input type="text" name="name" placeholder="Votre nom" required>
+                <input type="email" name="email" placeholder="Votre email" required>
+                <input type="tel" name="phone" placeholder="Votre téléphone" required>
+                <select name="service" required>
+                    <option value="">Choisissez un service</option>
+                    <option value="dpe-residential">DPE Résidentiel</option>
+                    <option value="dpe-commercial">DPE Tertiaire</option>
+                    <option value="renovation-advice">Conseil en Rénovation</option>
+                    <option value="dpe-rental">DPE Location</option>
+                </select>
+                <textarea name="message" placeholder="Votre message" required></textarea>
+                <button type="submit">Envoyer</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Expert en Diagnostic DPE. Tous droits réservés.</p>
+        <p>Certifié par le Ministère du Logement :cite[aw] | Membre de la Fédération Interprofessionnelle du Diagnostic Immobilier (FIDI)</p>
+    </footer>
+
+    <script>
+        // Contact form submission
+        document.getElementById('contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            // Ici, vous intégreriez l'envoi du formulaire à votre serveur
+            alert('Merci pour votre demande. Nous vous contacterons dans les plus brefs délais pour établir un devis personnalisé.');
+        });
+
+        // Vous pouvez ajouter ici des scripts supplémentaires pour améliorer l'interactivité du site
+    </script>
+</body>
+</html>
